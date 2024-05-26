@@ -1,0 +1,96 @@
+---
+
+import React from '../Icons/React.astro'
+import Winds from '../Winds.astro';
+---
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <Winds>
+
+            <span class=" flex flex-col gap-5 p-2 place-items-center  border-white ">
+                <div class=" fill-white size-14 " >
+                    <React/>
+                </div>
+                <p class=" text-3xl text-white font-semibold">
+                    React
+                </p>
+                
+            </span>
+        </Winds>
+       </div>
+       <div class="swiper-slide">
+        <Winds>
+
+            <span class=" flex flex-col gap-5 p-2 place-items-center  border-white ">
+                <div class=" fill-white size-14 " >
+                    <React/>
+                </div>
+                <p class=" text-3xl text-white font-semibold">
+                    React
+                </p>
+                
+            </span>
+        </Winds>
+       </div>
+       <div class="swiper-slide">
+        <Winds>
+
+            <span class=" flex flex-col gap-5 p-2 place-items-center  border-white ">
+                <div class=" fill-white size-14 " >
+                    <React/>
+                </div>
+                <p class=" text-3xl text-white font-semibold">
+                    React
+                </p>
+                
+            </span>
+        </Winds>
+       </div>
+
+
+      
+    </div>
+ 
+    </div>
+  </div>
+
+
+  <script type="module">
+      import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      freeMode: true,
+      loop: true,
+  
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
+

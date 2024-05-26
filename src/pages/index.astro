@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Marquee from '../components/Marquees/Marquee.astro';
+import Foto from '../../public/Foto.jpg'
+import Card from '../components/Card.astro';
+import Projetos from '../components/Projetos.astro';
+import Form from '../components/Form.astro';
+import Depoimentos from '../components/Swiper/Depoimentos.astro';
+import TextGradient from '../effects/TextGradient.astro';
+import Button from '../components/Button.astro';
+import Winds from '../components/Winds.astro';
+import React from '../components/Icons/React.astro';
+import Skills from '../components/Skills.astro';
+import MarqueTwo from "../components/Marquees/MarqueTwo.astro"
+---
+
+<Layout title="Welcome to Astro.">
+	<main class=" w-full  pb-20">
+
+		<section class=" flex flex-col gap-5 w-full px-5  lg:px-20 pt-40 pb-10  place-items-center">
+			<h2 class=" hidden lg:flex text-center bg-gradient-to-r from-lime-300 to-teal-400 p-2 text-xl sm:text-2xl text-black font-semibold rounded-lg ">software developer <br class="  flex lg:hidden"/> & Webmaster</h2>
+			<h2 class=" text-4xl sm:text-5xl lg:text-7xl text-center capitalize text-white font-bold font-prime" >
+				o desenvolvedor full stack que<br class=" hidden  lg:flex"/> 
+				<TextGradient>
+					esta falta sua equipe 
+				</TextGradient>
+				
+			</h2>
+			<p class=" text-white text-center  font-semibold text-xl lg:text-[1.7rem] lg:px-20">
+				Buscando um full stack para impulsionar sua equipe ou transformar suas ideias SaaS em realidade? Com experiência no desenvolvimento full stack, estou pronto para colaborar no sucesso do seu projeto. 
+			</p>
+			<Button Styled=" text-2xl lg:text-3xl" Texto="Agendar Reunião">
+				<svg xmlns="http://www.w3.org/2000/svg" width="" height="" viewBox="0 0 256 256">
+					<path fill="" d="M208 28h-20v-4a12 12 0 0 0-24 0v4H92v-4a12 12 0 0 0-24 0v4H48a20 20 0 0 0-20 20v160a20 20 0 0 0 20 20h160a20 20 0 0 0 20-20V48a20 20 0 0 0-20-20M68 52a12 12 0 0 0 24 0h72a12 12 0 0 0 24 0h16v24H52V52ZM52 204V100h152v104Zm92-76a16 16 0 1 1-16-16a16 16 0 0 1 16 16m48 0a16 16 0 1 1-16-16a16 16 0 0 1 16 16m-96 48a16 16 0 1 1-16-16a16 16 0 0 1 16 16m48 0a16 16 0 1 1-16-16a16 16 0 0 1 16 16m48 0a16 16 0 1 1-16-16a16 16 0 0 1 16 16"/>
+				</svg>
+			</Button>
+			
+		</section>
+		<section class=" w-full bg-gradient-to-r from-lime-300 to-teal-400">
+			<Marquee/>
+		</section>
+		
+
+
+		<section class=" w-full px-5 lg:px-20 pt-20 pb-10 flex flex-col lg:flex-row gap-5">
+			<div class=" hidden lg:flex w-[40%]">
+				<Winds Titulo="Foto" styled=" w-[85%]">
+					<img class=" " src="../../public/Foto.jpg" alt="">
+				</Winds>
+			</div>
+			
+			<div class="lg:w-[60%] w-full  flex place-items-center ">
+				<Winds Titulo=" Sobre mim">
+					<span class=" flex flex-col gap-5 p-4">
+						<span class="  w-full grid place-items-center lg:hidden ">
+
+							<img class=" border-2 border-lime-300 w-52 sm:w-64 " src="../../public/Foto.jpg" alt="">
+						</span>
+
+						<p class=" text-xl lg:text-2xl text-white font-semibold">
+							
+							Lorem ipsum vitae donec malesuada fusce morbi at vulputate nisl, taciti ullamcorper a ad class quisque ut justo mollis, habitant per sociosqu vestibulum sollicitudin vel leo nulla. <br/><br/>
+							facilisis etiam ultrices iaculis nam senectus faucibus ipsum consequat senectus, morbi non dolor felis ultricies lacus class felis. curae sodales blandit habitasse facilisis risus nullam dapibus aptent eget gravida, hac porttitor augue class faucibus semper erat ac suspendisse ad, class pellentesque fermentum morbi cras leo tempor urna vel. 
+						</p>
+						<span class=" flex flex-row gap-6 justify-center">
+							<span class=" size-12 fill-lime-300">
+
+								<React/>
+							</span>
+							<span class=" size-12 fill-lime-300">
+
+								<React/>
+							</span>
+							<span class=" size-12 fill-lime-300">
+
+								<React/>
+							</span>
+						
+
+						</span>
+					</span>
+					</Winds>
+				</div>
+
+		</section>
+		<section class=" px-5  lg:px-20 py-20 flex flex-col gap-8"> 
+			<h2 class=" text-center text-3xl lg:text-5xl text-white capitalize">Algumas das técnologias que<br class="  hidden lg:flex"/><TextGradient> gosto de trabalhar</TextGradient>  </h2>
+
+	       <span>
+
+			   <Skills/>
+			</span>
+		
+	</section>
+
+		<section class=" w-full  px-2.5 lg:px-20 py-10 flex flex-col gap-10 place-items-center">
+			<h2 class=" text-3xl lg:text-5xl text-center text-white font-semibold capitalize">Vejs como posso ajudar  <br class=" hidden lg:flex"/><TextGradient> sua empressa </TextGradient></h2>
+			<span class=" flex flex-col lg:flex-row gap-5 w-full">
+				<span class=" w-full lg:w-1/2">
+
+					<Card Class=" lg:h-48 w-1/2" Numero={1} Titulo=" Desevolvimento WebApp">
+						Construção de aplicativos web interativos e escaláveis usando tecnologias modernas como React.js, Angular, Vue.js, etc.
+						
+						
+					</Card>
+				</span>
+				<span class=" w-full lg:w-1/2">
+
+					<Card Class=" lg:h-48" Numero={2} Titulo="Manutenção e Atualização ">
+						Oferecimento de serviços de manutenção contínua, atualização de conteúdo e correção de bugs para garantir que os projetos estejam sempre funcionando perfeitamente.					
+					</Card>
+				</span>
+			
+			</span>
+			<span class=" flex flex-col lg:flex-row gap-5 w-full">
+				<span class=" w-full lg:w-1/2">
+
+					<Card Class=" lg:h-48" Numero={3} Titulo="Otimização de Desempenho ">
+						Análise e otimização do desempenho de websites e aplicativos para garantir tempos de carregamento rápidos, melhorar a experiência do usuário e aumentar a classificação nos mecanismos de busca
+					</Card>
+				</span>
+				<span class=" w-full lg:w-1/2">
+
+					<Card Class=" lg:h-48" Numero={4} Titulo="Atualização de Tecnologias">
+						Prestação de serviços de migração de sistemas legados para tecnologias mais modernas, bem como atualização de frameworks e bibliotecas para garantir a compatibilidade e segurança contínuas.
+					</Card>
+				</span>
+			
+			</span>
+		
+		
+
+			
+
+		</section>
+
+		<section class=" flex flex-col gap-10 pb-10 place-items-center px-2.5 lg:px-28">
+			<h2 class=" text-center text-white text-3xl lg:text-5xl font-semibold">Uma coleção dos meus<br class=" hidden lg:flex"/><TextGradient>melhores projetos</TextGradient>
+				</h2>
+			<span   class=" w-full lg:px-10 flex flex-col gap-6 ">
+				<Projetos/>
+				<Projetos/>
+				<Projetos/>
+				
+				 
+			</span>
+			<button @click="open = ! open" class=" bg-white p-2 text-black font-semibold text-3xl rounded-lg">
+				Ver mais
+			 </button>
+
+		</section>
+		<section class=" w-full bg-gradient-to-r from-lime-300 to-teal-400">
+			<MarqueTwo/>
+		</section>
+
+		<section class=" py-10 px-4 lg:px-20 w-full flex flex-col gap-5 place-items-center">
+			<h2 class=" text-center text-4xl lg:text-5xl font-semibold text-white ">
+				Vamos tomar um café ou<br class=" hidden lg:flex"/><TextGradient>deixar uma mensagem</TextGradient> 
+			</h2>
+			
+			<span class=" w-full lg:w-2/4">
+				<Form/>
+
+			</span>
+
+		</section>
+	   
+
+	</main>
+</Layout>
+
+

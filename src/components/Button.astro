@@ -1,0 +1,43 @@
+---
+interface Button {
+ Texto:string,
+}
+const {Texto, Styled,Link}= Astro.props
+
+---
+  
+  <a href={Link} class={Styled+"  px-4 py-2  font-semibold bg-white text-black flex align-middle "}>
+    {Texto}
+    <span>
+      <slot/>
+    </span>
+  </a>
+  
+  <style>
+    a {
+  
+
+  justify-content: center;
+  box-shadow: 0px 0px 0 #000;
+  transition: 0.5s;
+  position: relative;
+}
+
+a:hover {
+  box-shadow: 4px 6px 0 #fff;
+  background:rgb(190 242 100);
+  border: 2px solid #000;
+  color: #000;
+}
+
+a span {
+  margin-left: 10px;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+a:hover span {
+  width: 30px;
+}
+  </style>

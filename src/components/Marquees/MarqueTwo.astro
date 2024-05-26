@@ -1,0 +1,57 @@
+
+
+<div class="mar flex">
+    <h2 class=" flex flex-row ">*WebSite </h2>
+    <h2 class=" flex flex-row ">*Ecommerce</h2>
+    <h2 class=" flex flex-row ">*Aplicativos</h2>
+    <h2 class=" flex flex-row ">*Sistemas </h2>
+    <h2 class=" flex flex-row "> *Automação</h2>
+    <h2 class=" flex flex-row "> *Integração</h2>
+  
+  
+    </div>
+  
+  <script>
+  
+      function Marquee(selector, speed) {
+      const parentSelector = document.querySelector(selector);
+      const clone = parentSelector.innerHTML;
+      const firstElement = parentSelector.children[0];
+      let i = 0;
+      console.log(firstElement);
+      parentSelector.insertAdjacentHTML('beforeend', clone);
+      parentSelector.insertAdjacentHTML('beforeend', clone);
+    
+      setInterval(function () {
+        firstElement.style.marginLeft = `-${i}px`;
+        if (i > firstElement.clientWidth) {
+          i = 0;
+        }
+        i = i + speed;
+      }, 0);
+    }
+    
+    //after window is completed load
+    //1 class selector for marquee
+    //2 marquee speed 0.2
+    window.addEventListener('load', Marquee('.mar', 0.2))
+    
+  </script>
+  
+  <style>
+      .mar {
+    overflow: hidden;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .mar h2{
+    font-size: 3em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+  }
+  </style>

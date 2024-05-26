@@ -1,0 +1,29 @@
+---
+import TextGradient from "../effects/TextGradient.astro";
+import Winds from "./Winds.astro";
+interface Card {
+	Numero:number
+	Titulo:string
+	Class:string
+
+}
+const{Numero,Titulo,Class}=Astro.props
+
+---
+
+<Winds Titulo="Serviços">
+
+	<div class={ Class+ " flex flex-col gap-5 w-full p-5"}>
+		<TextGradient>
+				<span class=" flex flex-row gap-5">
+
+				<h3 class="  text-3xl lg:text-4xl  font-semibold">{Numero}</h3>
+				<h3 class="  text-3xl  lg:text-4xl  font-semibold">{Titulo}</h3>
+				
+			</span>
+			</TextGradient>
+		<p class=" text-xl text-white font-semibold">
+          <slot/>
+		</p>
+	</div>
+</Winds>

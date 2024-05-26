@@ -1,0 +1,92 @@
+---
+import SVG from "./Icons/SVG.astro"
+import SVG2 from "./Icons/SVG2.astro"
+import SVG3 from "./Icons/SVG3.astro"
+ import FrontOne from "../components/Swiper/FrontEnd/FrontOne.jsx"
+ import FrontTwo from "../components/Swiper/FrontEnd/FrontTwo.jsx"
+ import BackOne from "../components/Swiper/BackEnd/BackOne"
+ import BackTwo from "../components/Swiper/BackEnd/BackTwo"
+ import ToolOne from "../components/Swiper/Tools/ToolOne"
+ import ToolTwo from "../components/Swiper/Tools/ToolTwo"
+---
+
+
+
+<div class={ " flex flex-col  border-2 border-white backdrop-blur-2xl"}>
+    <div x-data="{ activeTab: 'London' }" class="space-y-4">
+    <span class=" flex flex-row justify-between px-2 py-1 border-b-2 border-white bg-white" >
+        <h3 class=" hidden md:flex  text-black text-2xl font-semibold">Skills</h3>
+        <div class="flex  ">
+            <button
+            :class="{ 'bg-gray-300': activeTab === 'London' }"
+            class="py-2 px-4"
+            @click="activeTab = 'London'"
+            >
+            Front-End
+        </button>
+        <button
+        :class="{ 'bg-gray-300': activeTab === 'Paris' }"
+        class="py-2 px-4"
+        @click="activeTab = 'Paris'"
+        >
+         Back-End
+    </button>
+    <button
+    :class="{ 'bg-gray-300': activeTab === 'Tokyo' }"
+    class="py-2 px-4"
+    @click="activeTab = 'Tokyo'"
+    >
+    Tools
+    </button>
+    </div>
+    
+            <span class=" hidden md:flex flex-row gap-3 place-items-center">
+           
+                    <SVG3/>
+                    <SVG2/>
+                    <span class=" p-1 hover:bg-red-600">
+
+                        <SVG/>
+                    </span>
+        
+                
+
+            </span>
+        
+    </span>
+
+<div x-show="activeTab === 'London'" class="p-4  border-gray-200  flex flex-col gap-10 ">
+   <span>
+    <FrontOne client:load/>
+   </span>
+   <span>
+    <FrontTwo client:load/>
+   </span>
+   
+</div>
+
+<div x-show="activeTab === 'Paris'" class="p-4 flex flex-col gap-10 border-gray-200">
+    <span>
+        <BackOne client:load/>
+
+    </span>
+     <span>
+        <BackTwo client:load/>
+     </span>
+
+</div>
+
+<div x-show="activeTab === 'Tokyo'" class="p-4 flex flex-col gap-10">
+    <span>
+        <ToolOne client:load/>
+
+    </span>
+
+    <span>
+        <ToolTwo client:load/>
+    </span>
+    
+</div>
+   </div>
+</div>
+
